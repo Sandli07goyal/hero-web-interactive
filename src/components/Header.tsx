@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Twitter, Facebook, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +48,12 @@ const Header = () => {
 
           {/* Center Logo */}
           <div className="flex items-center cursor-pointer absolute left-1/2 transform -translate-x-1/2" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Figma Land" className="h-10 md:h-12" style={{ mixBlendMode: 'lighten' }} />
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-2 bg-gradient-to-r from-accent to-accent rounded-full"></div>
+              <span className="text-white font-bold text-xl tracking-wider">
+                FIGMA L<span className="inline-block w-4 h-4 bg-primary" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></span>ND
+              </span>
+            </div>
           </div>
 
           {/* Right Social Icons */}
